@@ -11,6 +11,8 @@ exprBB: exprBB ('*' | '/') exprBB
     | 'clear' ID_VAR 
     | 'incr' ID_VAR
     | 'decr' ID_VAR
+    | move
+    | if
     ;
 
 // Regras Léxicas - BARE BONES
@@ -18,10 +20,17 @@ exprBB: exprBB ('*' | '/') exprBB
 ID_VAR: LETRA(NUMEROBB)+ | SUBLINHADO;
 LETRA: [a-zA-Z];
 SUBLINHADO: LETRA'_'[2-9]+[0-9]?; // De qualquer tamanho maior que 1
+
 //Regra 2: Valores Literais [00, 01 => Inválidos]
 NUMEROBB: [1-9]+[0-9]?;
+
 //ETC
 BRANCO: [ \t\r\n]+ -> skip;
+
+//Comandos
+move: ID_VAR 'to' ID_VAR;
+
+if: 'if' '(' ID_VAR ')' 'then' exprBB+ 'else' exprBB+;
 
 
 /*INPUTS PARA TESTES
@@ -37,3 +46,8 @@ decr x_30
 clear y_00
 incr y_01
 decr y_02
+
+move x to y
+
+if (x) then clear y else incr z
+if (x) then incr y else decr z
