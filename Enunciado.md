@@ -16,5 +16,8 @@ Deverá ser entregue um arquivo texto contendo a descrição da gramática para 
 - Comando while [Regra de acordo com a definição do enunciado]. [20 pontos]
     * Verificar. Está funcionando, porém as condicionais dele, são estranhas de se garantir.
 - Comando prog [Regra de acordo com a definição do enunciado]. [20 pontos]
-- Terminador de comando [Regra de acordo com a definição do enunciado]. [20 pontos]
+    * Verificar. Está funcionando, porém as condicionais dele, são estranhas de se garantir.
+- ~~Terminador de comando [Regra de acordo com a definição do enunciado].~~ [20 pontos]
+    * Revisar ao final. Está funcionando.
 - Bloco de comandos [Regra de acordo com a definição do enunciado]. [20 pontos]
+    * Revisar implementação.
