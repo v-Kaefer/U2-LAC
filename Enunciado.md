@@ -7,9 +7,9 @@ Deverá ser entregue um arquivo texto contendo a descrição da gramática para 
 
 
 - Gramática segue o formato aceito pela ferramenta ANTLR, sem mensagem de erro. [20 pontos]
-- Identificadores de variáveis [Regra de acordo com a definição do enunciado]. [20 pontos]
-- Valores literais [Regra de acordo com a definição do enunciado]. [20 pontos]
-- Comandos clear, incr, decr [Regra de acordo com a definição do enunciado]. [20 pontos]
+- ~~Identificadores de variáveis [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
+- ~~Valores literais [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
+- ~~Comandos clear, incr, decr [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
 - Comando move [Regra de acordo com a definição do enunciado]. [20 pontos]
 - Comando if, then, else [Regra de acordo com a definição do enunciado]. [20 pontos]
 - Comando while [Regra de acordo com a definição do enunciado]. [20 pontos]
