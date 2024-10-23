@@ -9,7 +9,7 @@ exprBB:
     | NUMEROBB
     | '(' exprBB ')' // Uma expressão, pode ser outra expressão. Separada por (). 
     // Comandos 'clear', 'incr', 'decr' com identificador de variável (ID_VAR)
-    | 'clear' ID_VAR
+    | 'clear' ID_VAR 
     | 'incr' ID_VAR
     | 'decr' ID_VAR
     ;
@@ -19,17 +19,22 @@ exprBB:
 ID_VAR: LETRA(NUMEROBB)+ | SUBLINHADO;
 LETRA: [a-zA-Z];
 SUBLINHADO: LETRA'_'[2-9]+[0-9]?; // De qualquer tamanho maior que 1
-
 //Regra 2: Valores Literais [00, 01 => Inválidos]
-ZERO: '0';
 NUMEROBB: [1-9]+[0-9]?;
-
-
 //ETC
 BRANCO: [ \t\r\n]+ -> skip;
 
 
 /*INPUTS PARA TESTES
-clear x
-incr x
-decr x
+clear x1
+clear x_1
+clear x_9
+incr x2
+incr x_2
+incr x_10
+decr x3
+decr x_3
+decr x_30
+clear y_00
+incr y_01
+decr y_02
