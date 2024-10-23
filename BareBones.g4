@@ -3,8 +3,7 @@ grammar BareBones;
 
 exprsBB: exprBB? EOF;
 
-exprBB: 
-    | exprBB ('*' | '/') exprBB
+exprBB: exprBB ('*' | '/') exprBB
     | exprBB ('+' | '-') exprBB // Operadores de menor prioridade
     | NUMEROBB
     | '(' exprBB ')' // Uma expressão, pode ser outra expressão. Separada por (). 
