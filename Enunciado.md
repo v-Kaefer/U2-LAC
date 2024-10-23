@@ -10,9 +10,11 @@ Deverá ser entregue um arquivo texto contendo a descrição da gramática para 
 - ~~Identificadores de variáveis [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
 - ~~Valores literais [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
 - ~~Comandos clear, incr, decr [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
-- Comando move [Regra de acordo com a definição do enunciado]. [20 pontos]
+- ~~Comando move [Regra de acordo com a definição do enunciado].~~ [20 pontos] OK
 - Comando if, then, else [Regra de acordo com a definição do enunciado]. [20 pontos]
+    * Verificar. Está funcionando, porém as condicionais dele, são estranhas de se garantir.
 - Comando while [Regra de acordo com a definição do enunciado]. [20 pontos]
+    * Verificar. Está funcionando, porém as condicionais dele, são estranhas de se garantir.
 - Comando prog [Regra de acordo com a definição do enunciado]. [20 pontos]
 - Terminador de comando [Regra de acordo com a definição do enunciado]. [20 pontos]
 - Bloco de comandos [Regra de acordo com a definição do enunciado]. [20 pontos]

@@ -13,6 +13,7 @@ exprBB: exprBB ('*' | '/') exprBB
     | 'decr' ID_VAR
     | move
     | if
+    | while
     ;
 
 // Regras Léxicas - BARE BONES
@@ -30,7 +31,10 @@ BRANCO: [ \t\r\n]+ -> skip;
 //Comandos
 move: ID_VAR 'to' ID_VAR;
 
-if: 'if' '(' ID_VAR ')' 'then' exprBB+ 'else' exprBB+;
+if: 'if' '(' ID_VAR ')' 'then' bloco 'else' bloco;
+
+while: 'while' '(' ID_VAR ')' 'do' bloco;
+bloco: exprBB+; // Um ou mais comandos, garantindo que não seja vazio
 
 
 /*INPUTS PARA TESTES
@@ -51,3 +55,15 @@ move x to y
 
 if (x) then clear y else incr z
 if (x) then incr y else decr z
+if (x) then clear y else decr z
+if (x) then decr       // Deve falhar: falta um comando após 'then'
+if (x) then            // Deve falhar: falta um comando após 'then' e 'else'
+if (x)                 // Deve falhar: falta 'then' e 'else'
+if (x) then clear y    // Deve falhar: falta um comando após 'else'
+
+while (x) do clear y
+while (x) do incr z
+while (x) do decr a clear b
+while (x) do         // Deve falhar: falta um comando após 'do'
+while (x)            // Deve falhar: falta 'do' e comandos
+
