@@ -25,20 +25,3 @@ BRANCO: [ \t\r\n]+ -> skip; // Ignora os espaços em branco, enter, nova linha, 
 
 
 
-// LINGUAGEM BARE BONES
-
-exprsBB: exprBB* EOF;
-
-exprBB: VAR ('' | '')
-
-
-// Regras Léxicas - BARE BONES
-//Regra 1: Identificador de Variáveis
-VAR: LETRA | SUBLINHADO;
-LETRA: [a-zA-Z];
-SUBLI_NUMS: [2-9]; // De qualquer tamanho maior que 1
-SUBLINHADO: LETRA'_'SUBLI_NUMS+;
-//Regra 2: Valores Literais
-ZERO: '0';
-VAL_LIT: NUMEROBB | ZERO;
-NUMEROBB: [1-9]+;
